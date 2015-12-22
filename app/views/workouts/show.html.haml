@@ -1,0 +1,8 @@
+%p= @workout.date
+%p= @workout.workout
+%p= @workout.mood
+%p= @workout.length
+
+= link_to("Home", root_url)
+= link_to("Edit", edit_workout_url)
+= link_to("Delete", workout_url, method: :delete, data: { confirm: "Are you sure?" })
