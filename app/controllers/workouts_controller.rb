@@ -27,7 +27,7 @@ class WorkoutsController < ApplicationController
   end
 
   def update
-    if @workout.update
+    if @workout.update(workout_params)
       redirect_to(@workout)
     else
       render :file => "edit"
@@ -35,7 +35,8 @@ class WorkoutsController < ApplicationController
   end
 
   def destroy
-
+    @workout.destroy
+    redirect_to(root_path)
   end
 
   private
