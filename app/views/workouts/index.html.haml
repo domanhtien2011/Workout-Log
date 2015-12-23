@@ -1,8 +1,11 @@
-%blockquote
-  %h1 The easy day was yesterday
-  %strong -US NAVY SEALS-
+#index_workouts
+  %blockquote
+    %h1 The easy day was yesterday
+    %strong -US NAVY SEALS-
 
-- @workouts.each do |workout|
-  %h2= link_to workout.date.strftime("%A %B %d"), workout
-  %h3= workout.workout
+  - @workouts.each do |workout|
+    %h2= link_to workout.date.strftime("%A %B %d"), workout
+    %h3
+      %span Workout:
+      = workout.workout
 
